@@ -16,6 +16,11 @@
                         this.vid.play();
                     }.bind(this));
 
+                    marker.addEventListener('markerLost', function () {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }.bind(this));
+
                     
                 },
             });
