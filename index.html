@@ -11,7 +11,12 @@
                     var marker = this.el;
                     this.vid = document.querySelector("#vid");
 
+ marker.addEventListener('markerFound', function () {
+                        this.toggle = true;
+                        this.vid.play();
+                    }.bind(this));
 
+                    
                 },
             });
         </script>
